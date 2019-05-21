@@ -43,13 +43,15 @@ class App extends Component {
             const pixels = this.getPixels()
             //console.log('snapshot', snapshot)
 
-            let html = `<img src="${snapshot}" width="100%" style="border:2px solid black; height:150px; width:${pixels}px;" />`;
+            let html = `<img src="${snapshot}" width="100%" style="border:2px solid black; height:${pixels}px; width:${pixels}px;" />`;
             html += '<p>Hello world</p>'
             html += snapshot
 
             const pdf = await Print.printToFileAsync({ html });
 
             console.log('the pdf i got back was ', pdf)
+
+
 
             // return Print.printAsync({ html }).catch(error =>
             //     Alert.alert(error.message)
