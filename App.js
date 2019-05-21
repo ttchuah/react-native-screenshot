@@ -45,11 +45,11 @@ class App extends Component {
 
             let html = `<img src="${snapshot}" width="100%" style="border:2px solid black; height:${pixels}px; width:${pixels}px;" />`;
             html += '<p>Hello world</p>'
-            html += snapshot
+            //html += snapshot
 
             const pdf = await Print.printToFileAsync({ html });
 
-            console.log('the pdf i got back was ', pdf)
+            //console.log('the pdf i got back was ', pdf)
 
 
 
